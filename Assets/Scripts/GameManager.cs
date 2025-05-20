@@ -67,11 +67,14 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("Player Win");
                 isPlayerWin = true;
+                SceneManager.LoadScene("Winning");
             }
         }
         else//Player Lose
         {
-            SceneManager.LoadScene("MainMenu");
+            Debug.Log("Game Over");
+            isPlayerWin = false;
+            SceneManager.LoadScene("Game Over");
         }
     }
 }
